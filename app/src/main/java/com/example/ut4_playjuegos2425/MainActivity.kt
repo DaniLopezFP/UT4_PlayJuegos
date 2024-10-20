@@ -58,6 +58,8 @@ class MainActivity : ComponentActivity() {
                             composable("NewPlayer") { MenuNewPlayer() }
                             composable("PlayJuegos") { MenuPlayGames(navController) }
                             composable("Preferences") { Preferences() }
+                            composable("Play") { Juegos() }
+                            composable("Usuarios") { UsersView() }
                         }
                     }
                 }
@@ -107,7 +109,7 @@ fun MenuVertical(navController: NavHostController) {
             )
             Spacer(modifier = Modifier.size(20.dp))
             Button(
-                onClick = { },//navController.navigate("Play") },
+                onClick = { navController.navigate("Play") },
                 modifier = Modifier.width(200.dp)
             ) {
                 Text(text = "Play")
@@ -128,7 +130,7 @@ fun MenuVertical(navController: NavHostController) {
             //Spacer(modifier = Modifier.size(20.dp))
             //Button(onClick = { navController.navigate("Preferences") }, modifier = Modifier.width(200.dp)) {
             Button(
-                onClick = { },//navController.navigate("About") },
+                onClick = { navController.navigate("Usuarios") },
                 modifier = Modifier.width(200.dp)
             ) {
                 Text(text = "Users")
@@ -181,7 +183,7 @@ fun MenuHorizontal(navController: NavHostController) {
             }
             Row {
                 Button(
-                    onClick = { },//navController.navigate("Play") },
+                    onClick = { navController.navigate("Play") },
                     modifier = Modifier.width(200.dp)
                 ) {
                     Text(text = "Play")
@@ -203,7 +205,7 @@ fun MenuHorizontal(navController: NavHostController) {
                 }
                 Spacer(modifier = Modifier.size(20.dp))
                 Button(
-                    onClick = { },//navController.navigate("About") },
+                    onClick = { navController.navigate("Usuarios") },
                     modifier = Modifier.width(200.dp)
                 ) {
                     Text(text = "Users")
